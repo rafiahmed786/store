@@ -2,47 +2,55 @@ body {
   overflow-x: hidden;
   font-family: "Montserrat", sans-serif;
 }
-.search-field {
-  border: none;
-  border-radius: 50px;
-  padding: 5px;
-  outline: none;
+p {
+  font-size: 19px !important;
 }
-.search-field:hover {
-  outline: none;
-  border: none;
+#search-btn:hover {
+  background-color: #333;
+  color: #fff;
 }
 .search-box {
-  border: 1px solid rgb(3, 118, 211);
-  width: 281px;
-  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  width: 50%;
   margin: auto;
-  margin-top: 50px;
-  border-right: none;
+  padding: 20px 0;
 }
-.search-button {
-  padding: 10px 50px;
-  border-radius: 25px;
-  margin-left: 20px;
-}
+
 #all-products {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  /* border: 1px solid black; */
-  text-align: center;
-  width: 100%;
-  margin: auto;
-  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
 }
-.single-product {
-  padding: 10px;
-  transition: 0.6s;
+.deatils-button {
+  background-color: #0047ab !important;
+  color: #fff !important;
 }
-.single-product:hover {
-  box-shadow: 4px 4px 7px gray;
+.cart-button {
+  background-color: #191970 !important;
+  color: #fff !important;
+}
+.deatils-button:hover,
+.cart-button:hover {
+  color: #fff !important;
+  background-color: #333 !important;
+}
+
+.single-product {
+  width: 300px;
+  height: auto;
+  padding: 20px;
+  transition: 0.6s;
+  box-shadow: 0px 0px 36px -6px rgba(1 1 1 / 20%);
   border-radius: 10px;
-  border: 1px solid cyan;
+  margin: 15px;
+  padding-bottom: 40px;
+}
+
+.single-product-img {
+  display: flex;
+  justify-content: center;
 }
 .product-image {
   width: 150px;
@@ -50,24 +58,19 @@ body {
 }
 .cart {
   width: 350px;
-  /* border: 1px solid green; */
   padding: 10px;
   box-shadow: 10px 10px 20px gray;
   border-radius: 5px;
   margin-right: 30px;
   position: fixed;
+  top: 250px;
 }
 .cart-main {
   padding-right: 30px;
 }
 @media only screen and (max-width: 768px) {
-  #all-products {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-  }
   .cart {
     width: 300px;
-    /* border: 1px solid green; */
     padding: 10px;
     box-shadow: 10px 10px 20px gray;
     border-radius: 5px;
@@ -76,11 +79,5 @@ body {
   }
   .cart-main {
     padding-right: 10px;
-  }
-}
-@media only screen and (max-width: 468px) {
-  #all-products {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
   }
 }
